@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+body {
+  font-family: "Lato";
+  color: white;
+  text-align: center;
+  background-color: #f3f3f3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  background-size: cover;
+  height: 100vh;
+}
+
+.header {
+  background-image: url(../img/bg-header.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.title {
+  font-size: 34px;
+  text-transform: uppercase;
+  line-height: 1.176;
+}
+
+.subtitle {
+  font-size: 24px;
+  line-height: 1.176;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.subtitle::after {
+  content: "";
+  position: absolute;
+  width: 9.545454%;
+  min-width: 105px;
+  height: 2px;
+  margin-top: 55px;
+  background-color: #fff;
+}
+
+.container {
+  height: inherit;
+  width: 57.2916666%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.btn-header {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 16.545454%;
+  min-width: 182px;
+  height: 47px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #ffffff;
+  margin-top: 280px;
+}
+
+.btn-header:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.portfolio {
+  padding: 50px 0 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #fff;
+  color: black;
+}
+
+.portfolio__title {
+  color: black;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.portfolio__title::after {
+  content: "";
+  position: absolute;
+  width: 9.545454%;
+  min-width: 105px;
+  height: 2px;
+  margin-top: 55px;
+  background-color: black;
+}
+
+.portfolio__item {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 100px;
+}
+
+.portfolio__item img {
+  width: 90%;
+  max-width: 1100px;
+  margin: 30px 0 30px 0;
+  -webkit-box-shadow: 2px 2px 30px 0px #3d3a3a;
+          box-shadow: 2px 2px 30px 0px #3d3a3a;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.portfolio__item .item__title {
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+.portfolio__item .item__text {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  text-align: left;
+  font-size: 20px;
+}
+
+.link {
+  font-size: 20px;
+  font-family: "Lato";
+  color: black;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-top: 20px;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  height: 100vh;
+  color: #a4a4a4;
+  background-color: #3c3c3c;
+}
+
+.footer__title {
+  color: white;
+}
+
+.footer__subtitle::after {
+  background-color: #a4a4a4;
+}
+
+.footer .social-list {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 100px;
+  width: 15%;
+  min-width: 105px;
+}
+
+.footer .social-list__link {
+  display: block;
+  color: white;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+
+.footer .social-list__link:hover {
+  display: block;
+  color: #a4a4a4;
+  cursor: pointer;
+}
+
+.email-modal {
+  display: none;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
+  width: 70%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-width: 300px;
+  min-height: 300px;
+  position: fixed;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  top: 10px;
+  z-index: 10;
+  color: black;
+  padding: 20px 0 20px 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 20px;
+  -webkit-box-shadow: 2px 2px 30px 0px #cac2c2;
+          box-shadow: 2px 2px 30px 0px #cac2c2;
+}
+
+.email-modal__btn {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 182px;
+  height: 47px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #3c3c3c;
+}
+
+.email-modal__btn:hover {
+  background-color: #3c3c3c;
+  color: #fff;
+  cursor: pointer;
+}
+
+.email-modal span:first-of-type {
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+/*# sourceMappingURL=style.css.map */
