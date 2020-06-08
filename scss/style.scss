@@ -40,6 +40,7 @@ section {
   line-height: 1.176;
 }
 .subtitle {
+  margin-top: 10px;
   font-size: 24px;
   line-height: 1.176;
   display: flex;
@@ -204,6 +205,26 @@ section {
     letter-spacing: 2px;
   }
 }
-// * {
-//   z-index: -10;
-// }
+@media (max-width: 1024px) {
+  .portfolio {
+    &__item {
+      img {
+        box-shadow: 2px 2px 20px 0px rgb(61, 58, 58);
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    width: 80%;
+  }
+}
+@media (max-width: 425px) {
+  .portfolio {
+    &__item {
+      img {
+        box-shadow: 2px 2px 20px 0px rgb(61, 58, 58);
+      }
+    }
+  }
+}

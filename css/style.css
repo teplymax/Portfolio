@@ -59,6 +59,7 @@ section {
 }
 
 .subtitle {
+  margin-top: 10px;
   font-size: 24px;
   line-height: 1.176;
   display: -webkit-box;
@@ -299,5 +300,25 @@ section {
 .email-modal span:first-of-type {
   font-size: 24px;
   letter-spacing: 2px;
+}
+
+@media (max-width: 1024px) {
+  .portfolio__item img {
+    -webkit-box-shadow: 2px 2px 20px 0px #3d3a3a;
+            box-shadow: 2px 2px 20px 0px #3d3a3a;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 425px) {
+  .portfolio__item img {
+    -webkit-box-shadow: 2px 2px 20px 0px #3d3a3a;
+            box-shadow: 2px 2px 20px 0px #3d3a3a;
+  }
 }
 /*# sourceMappingURL=style.css.map */
