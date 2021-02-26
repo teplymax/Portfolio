@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Builder_Lviv</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./fonts/Gilroy/stylesheet.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__contacts">
+            <div class="header__body container">
+            <span class="header__contact">+38 (067) 467-37-67</span>
+            <span class="header__contact">+38 (067) 467-37-67</span>
+            <div class="header__socials">
+                <a href="/" class="header__social social">
+                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0)">
+                        <path d="M9.38127 0C4.20093 0 0 4.20093 0 9.38127C0 14.5616 4.20093 18.7625 9.38127 18.7625C14.5616 18.7625 18.7625 14.5616 18.7625 9.38127C18.7625 4.20093 14.5616 0 9.38127 0ZM6.65518 14.1818H4.37041V7.30807H6.65518V14.1818ZM5.51287 6.36946H5.49798C4.73129 6.36946 4.23543 5.84168 4.23543 5.18206C4.23543 4.50755 4.74646 3.99437 5.52804 3.99437C6.30962 3.99437 6.7906 4.50755 6.80548 5.18206C6.80548 5.84168 6.30962 6.36946 5.51287 6.36946ZM14.8936 14.1818H12.6091V10.5045C12.6091 9.58038 12.2783 8.95011 11.4516 8.95011C10.8205 8.95011 10.4446 9.37526 10.2794 9.78566C10.219 9.93253 10.2042 10.1378 10.2042 10.3432V14.1818H7.9196C7.9196 14.1818 7.94951 7.95295 7.9196 7.30807H10.2042V8.28133C10.5078 7.81295 11.0511 7.14675 12.2632 7.14675C13.7664 7.14675 14.8936 8.12916 14.8936 10.2404V14.1818Z" fill="white"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0">
+                        <rect width="18.7625" height="18.7625" fill="white"/>
+                        </clipPath>
+                        </defs>
+                        </svg>                        
+                </a>
+                <a href="/" class="header__social social">
+                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0)">
+                        <path d="M11.1889 18.6404C11.1108 18.6532 11.0323 18.6649 10.9536 18.6757C11.0323 18.6649 11.1108 18.6532 11.1889 18.6404Z" fill="white"/>
+                        <path d="M11.3767 18.6084C11.3394 18.6152 11.302 18.6215 11.2646 18.628C11.302 18.6215 11.3394 18.6152 11.3767 18.6084Z" fill="white"/>
+                        <path d="M10.7441 18.7017C10.6526 18.712 10.5606 18.7212 10.4683 18.7289C10.5606 18.7212 10.6526 18.712 10.7441 18.7017Z" fill="white"/>
+                        <path d="M10.9243 18.6797C10.8803 18.6854 10.8361 18.6907 10.792 18.6957C10.8361 18.6907 10.8803 18.6854 10.9243 18.6797Z" fill="white"/>
+                        <path d="M11.6318 18.5577C11.5988 18.5647 11.5658 18.5717 11.5327 18.5785C11.5658 18.5717 11.5988 18.5647 11.6318 18.5577Z" fill="white"/>
+                        <path d="M12.2659 18.4002C12.2393 18.4078 12.2127 18.415 12.186 18.4224C12.2127 18.415 12.2393 18.4078 12.2659 18.4002Z" fill="white"/>
+                        <path d="M12.0738 18.4526C12.0449 18.4602 12.0159 18.4679 11.9868 18.4752C12.0159 18.4679 12.0449 18.4603 12.0738 18.4526Z" fill="white"/>
+                        <path d="M11.8234 18.5153C11.7928 18.5225 11.7619 18.5292 11.731 18.5361C11.7619 18.5292 11.7928 18.5225 11.8234 18.5153Z" fill="white"/>
+                        <path d="M10.4652 18.7292C10.4158 18.7332 10.3664 18.7368 10.3169 18.74C10.3664 18.7368 10.4158 18.7332 10.4652 18.7292Z" fill="white"/>
+                        <path d="M19.0575 9.38127C19.0575 4.20093 14.8565 0 9.67619 0C4.49585 0 0.294922 4.20093 0.294922 9.38127C0.294922 14.5616 4.49585 18.7625 9.67619 18.7625C9.7313 18.7625 9.78613 18.7614 9.84109 18.7604V11.4575H7.82559V9.10857H9.84109V7.38008C9.84109 5.37545 11.0649 4.28438 12.853 4.28438C13.7093 4.28438 14.4454 4.34823 14.66 4.37671V6.47181H13.4269C12.4541 6.47181 12.2657 6.93417 12.2657 7.61255V9.10857H14.5919L14.2887 11.4575H12.2657V18.4001C16.1869 17.276 19.0575 13.6634 19.0575 9.38127Z" fill="white"/>
+                        <path d="M10.296 18.7416C10.1984 18.7478 10.1003 18.7526 10.002 18.7558C10.1003 18.7526 10.1984 18.7478 10.296 18.7416Z" fill="white"/>
+                        <path d="M9.99705 18.7565C9.94523 18.7582 9.89327 18.7595 9.84131 18.7603C9.89327 18.7595 9.94523 18.7582 9.99705 18.7565Z" fill="white"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0">
+                        <rect width="18.7625" height="18.7625" fill="white" transform="translate(0.294922)"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                        </a>
+                <a href="/" class="header__social social">
+                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0)">
+                        <path d="M11.7666 9.38127C11.7666 10.373 10.9626 11.1769 9.97093 11.1769C8.97921 11.1769 8.17529 10.373 8.17529 9.38127C8.17529 8.38954 8.97921 7.58563 9.97093 7.58563C10.9626 7.58563 11.7666 8.38954 11.7666 9.38127Z" fill="white"/>
+                        <path d="M14.1704 6.20428C14.0841 5.97038 13.9464 5.75866 13.7674 5.58488C13.5937 5.40595 13.3821 5.26824 13.1481 5.18192C12.9582 5.1082 12.6731 5.02046 12.1479 4.99655C11.5797 4.97064 11.4094 4.96506 9.97105 4.96506C8.53257 4.96506 8.36223 4.9705 7.79422 4.99641C7.26901 5.02046 6.98372 5.1082 6.79405 5.18192C6.56001 5.26824 6.34829 5.40595 6.17466 5.58488C5.99572 5.75866 5.85802 5.97023 5.77155 6.20428C5.69783 6.39409 5.61009 6.67938 5.58618 7.20459C5.56027 7.7726 5.55469 7.94294 5.55469 9.38142C5.55469 10.8198 5.56027 10.9901 5.58618 11.5583C5.61009 12.0835 5.69783 12.3686 5.77155 12.5584C5.85802 12.7925 5.99558 13.004 6.17451 13.1778C6.34829 13.3568 6.55986 13.4945 6.79391 13.5808C6.98372 13.6546 7.26901 13.7424 7.79422 13.7663C8.36223 13.7922 8.53243 13.7976 9.97091 13.7976C11.4095 13.7976 11.5799 13.7922 12.1477 13.7663C12.6729 13.7424 12.9582 13.6546 13.1481 13.5808C13.6179 13.3996 13.9892 13.0282 14.1704 12.5584C14.2441 12.3686 14.3319 12.0835 14.3559 11.5583C14.3818 10.9901 14.3873 10.8198 14.3873 9.38142C14.3873 7.94294 14.3818 7.7726 14.3559 7.20459C14.332 6.67938 14.2443 6.39409 14.1704 6.20428ZM9.97105 12.1474C8.44325 12.1474 7.20474 10.9091 7.20474 9.38128C7.20474 7.85347 8.44325 6.61511 9.97105 6.61511C11.4987 6.61511 12.7372 7.85347 12.7372 9.38128C12.7372 10.9091 11.4987 12.1474 9.97105 12.1474ZM12.8466 7.1522C12.4896 7.1522 12.2001 6.86275 12.2001 6.50575C12.2001 6.14874 12.4896 5.8593 12.8466 5.8593C13.2036 5.8593 13.493 6.14874 13.493 6.50575C13.4929 6.86275 13.2036 7.1522 12.8466 7.1522Z" fill="white"/>
+                        <path d="M9.97111 0C4.79077 0 0.589844 4.20093 0.589844 9.38127C0.589844 14.5616 4.79077 18.7625 9.97111 18.7625C15.1515 18.7625 19.3524 14.5616 19.3524 9.38127C19.3524 4.20093 15.1515 0 9.97111 0ZM15.3255 11.6022C15.2995 12.1756 15.2083 12.5671 15.0752 12.9098C14.7953 13.6334 14.2233 14.2055 13.4997 14.4853C13.1571 14.6184 12.7655 14.7095 12.1922 14.7357C11.6177 14.7619 11.4342 14.7682 9.97125 14.7682C8.50815 14.7682 8.32478 14.7619 7.75019 14.7357C7.17689 14.7095 6.78524 14.6184 6.44269 14.4853C6.0831 14.35 5.75759 14.138 5.48847 13.8639C5.21449 13.5949 5.00249 13.2693 4.86721 12.9098C4.73409 12.5673 4.6429 12.1756 4.61685 11.6023C4.59037 11.0277 4.58421 10.8442 4.58421 9.38127C4.58421 7.91831 4.59037 7.73479 4.61671 7.16035C4.64276 6.5869 4.7338 6.19539 4.86693 5.8527C5.0022 5.49326 5.21434 5.1676 5.48847 4.89863C5.75744 4.6245 6.0831 4.4125 6.44254 4.27723C6.78524 4.1441 7.17674 4.05306 7.75019 4.02686C8.32464 4.00067 8.50815 3.99437 9.97111 3.99437C11.4341 3.99437 11.6176 4.00067 12.192 4.02701C12.7655 4.05306 13.157 4.1441 13.4997 4.27708C13.8591 4.41236 14.1848 4.6245 14.4539 4.89863C14.7279 5.16774 14.94 5.49326 15.0752 5.8527C15.2084 6.19539 15.2995 6.5869 15.3257 7.16035C15.3519 7.73479 15.358 7.91831 15.358 9.38127C15.358 10.8442 15.3519 11.0277 15.3255 11.6022Z" fill="white"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0">
+                        <rect width="18.7625" height="18.7625" fill="white" transform="translate(0.589844)"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                        
+                </a>
+            </div>
+        </div>
+        </div>
+        <div class="header__body container">
+            <nav class="header__navigation">
+                <img src="./img/LOGO.png" alt="Logo">
+                <ul class="header__list list">
+                    <li class="header__item"><a href="#about" class="header__link">Про нас</a></li>
+                    <li class="header__item"><a href="#reviews" class="header__link">Відгуки</a></li>
+                    <li class="header__item"><a href="/" class="header__link">Ціни</a></li>
+                    <li class="header__item"><a href="#portfolio" class="header__link">Наші роботи</a></li>
+                    <li class="header__item"><a href="#contacts" class="header__link">Контакти</a></li>
+                </ul>
+                <button class="header__button button">Замовити дзвінок</button>
+            </nav>
+        
+        <div class="header-about">
+            <h1 class="header-about__title title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h1>
+            <p class="header-about__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam condimentum eros arcu, at aliquet tortor vestibulum ut. Quisque sed libero nec nulla pulvinar pharetra. Aliquam porttitor justo lorem, at rhoncus nulla condimentum vitae. Cras vitae aliquet quam. </p>
+            <button class="header-about__button button">Залишити заявку</button>
+        </div>
+    </div>
+        <section class="header-advantages">
+            <div class="header-advantages__container container">
+          <div class="header-advantages__item">
+              <p class="header-advantages__text">Фіксований <br/> кошторис
+              </p>
+              <img src="./img/business 1.png" alt="Business1" class="header-advantages__img">
+          </div>
+          <div class="header-advantages__item">
+              <p class="header-advantages__text">Працюємо без <br/>авансів</p>
+              <img src="./img/money-bag 1.png" alt="Business1" class="header-advantages__img">
+          </div>
+          <div class="header-advantages__item">
+              <p class="header-advantages__text">Щотижнева <br/> звітність робочого <br/> процесу</p>
+              <img src="./img/business-report 1.png" alt="Business1" class="header-advantages__img">
+          </div>
+          <div class="header-advantages__item">
+              <p class="header-advantages__text">Здача роботи у <br/> зазначені <br/> терміни</p>
+              <img src="./img/fast 2.png" alt="Business1" class="header-advantages__img">
+          </div>
+          <div class="header-advantages__item">
+              <p class="header-advantages__text">Гарантія на <br/> роботи</p>
+              <img src="./img/guarantee 1.png" alt="Business1" class="header-advantages__img">
+          </div>
+        </div>
+      </section>
+    </header>
+    <section class="about" id="about">
+        <div class="about__left">
+            <div class="about__years">
+                <span>10+</span>
+                <p>Років<br/> досвіду</p>
+            </div>
+        </div>
+        <div class="about__right">
+            <h3 class="about__subtitle subtitle">Про нас</h3>
+            <h2 class="about__title title">Хто ми такі?</h2>
+            <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam condimentum eros arcu, at aliquet tortor vestibulum ut. Quisque sed libero nec nulla pulvinar pharetra. Aliquam porttitor justo lorem, at rhoncus nulla condimentum vitae. Cras vitae aliquet quam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus id quam nulla. Proin consequat mauris augue, id suscipit risus mattis non. Sed a vulputate diam.
+                <br/>
+                Mauris eget urna quis nisl lacinia convallis. Mauris ut urna sed sem egestas hendrerit at vel quam. Vestibulum maximus velit dui. </p>
+        </div>
+    </section>
+    <section class="workStages">
+        <div class="workStages__container container">
+        <h3 class="workStages__subtitle subtitle">етапи роботи</h3>
+        <h2 class="workStages__title title">Як ми працюємо?</h2>
+        <div class="workStages__visualization">
+            <svg width="1028" height="73" viewBox="0 0 1028 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M36.12 40.88C36.12 42.1333 36.4 43 36.96 43.48C37.5467 43.9333 38.5467 44.16 39.96 44.16V45C37.08 44.8933 35.24 44.84 34.44 44.84C33.6933 44.84 31.96 44.88 29.24 44.96L28.28 45V44.16C29.6933 44.16 30.7467 43.92 31.44 43.44C32.16 42.96 32.52 42.1067 32.52 40.88V31.2C32.52 29.92 32.3867 28.9867 32.12 28.4C31.8533 27.7867 31.4 27.3867 30.76 27.2C30.1467 26.9867 29.1867 26.88 27.88 26.88V26C29.8267 25.9467 31.4267 25.7733 32.68 25.48C33.96 25.1867 35.1067 24.68 36.12 23.96V40.88Z" fill="white"/>
+                <circle cx="33" cy="34.7622" r="32.5" stroke="white"/>
+                <line x1="66" y1="34.5" x2="194" y2="34.5" stroke="white"/>
+                <line x1="262" y1="34.5" x2="390" y2="34.5" stroke="white"/>
+                <line x1="455" y1="34.5" x2="583" y2="34.5" stroke="white"/>
+                <line x1="649" y1="34.5" x2="772" y2="34.5" stroke="white"/>
+                <line x1="837" y1="34.5" x2="960" y2="34.5" stroke="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M64.9716 20.8874C59.6911 8.60265 47.4807 0 33.2611 0C31.7753 0 30.3114 0.0939298 28.875 0.276175L28.875 3.30292C30.3084 3.10323 31.7727 3 33.2611 3C45.7825 3 56.5976 10.3059 61.676 20.8874H64.9716Z" fill="#FFB800"/>
+                <path d="M227.76 25.84C229.627 25.84 231.093 26.28 232.16 27.16C233.227 28.04 233.76 29.28 233.76 30.88C233.76 31.9733 233.467 33.04 232.88 34.08C232.32 35.0933 231.627 36.0267 230.8 36.88C230 37.7333 228.933 38.76 227.6 39.96C226.507 40.9733 225.693 41.7467 225.16 42.28C224.627 42.7867 224.147 43.3333 223.72 43.92H231.84C232.56 43.92 233.093 43.8667 233.44 43.76C233.813 43.6267 234.067 43.4267 234.2 43.16C234.333 42.8667 234.44 42.44 234.52 41.88H235.2C235.2 44.3333 235.253 46.1067 235.36 47.2C234.773 47.0667 232.787 47 229.4 47H220.04V46.32C220.493 45.84 221.267 45.08 222.36 44.04C223.88 42.6267 225.147 41.36 226.16 40.24C227.173 39.0933 228.04 37.8 228.76 36.36C229.507 34.92 229.88 33.3867 229.88 31.76C229.88 28.88 228.547 27.44 225.88 27.44C223.693 27.44 221.907 28.6933 220.52 31.2L219.88 30.84C220.573 29.4 221.56 28.2133 222.84 27.28C224.12 26.32 225.76 25.84 227.76 25.84Z" fill="white"/>
+                <circle cx="227" cy="35" r="32.5" stroke="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M258.43 50.4333C260.802 45.7385 262.139 40.4313 262.139 34.812C262.139 15.6544 246.608 0.124023 227.451 0.124023C227.085 0.124023 226.721 0.129674 226.358 0.140891V3.14249C226.721 3.13021 227.085 3.12402 227.451 3.12402C244.951 3.12402 259.139 17.3112 259.139 34.812C259.139 39.9489 257.916 44.8004 255.747 49.0913L258.43 50.4333Z" fill="#FFB800"/>
+                <path d="M424.08 23.84C425.76 23.84 427.133 24.2533 428.2 25.08C429.293 25.9067 429.84 27.0133 429.84 28.4C429.84 29.8667 429.253 31.1867 428.08 32.36C426.933 33.5333 425.533 34.4133 423.88 35C425.933 35.0533 427.68 35.6 429.12 36.64C430.56 37.68 431.28 39.16 431.28 41.08C431.28 43 430.533 44.72 429.04 46.24C427.573 47.76 425.693 48.9333 423.4 49.76C421.133 50.6133 418.827 51.04 416.48 51.04V50.32C418.373 50.2667 420.16 49.8667 421.84 49.12C423.52 48.4 424.88 47.3467 425.92 45.96C426.96 44.6 427.48 42.9733 427.48 41.08C427.48 39.5067 427.093 38.2133 426.32 37.2C425.547 36.16 424.52 35.5867 423.24 35.48C423.133 35.5333 422.853 35.6533 422.4 35.84C421.973 36 421.627 36.08 421.36 36.08C420.933 36.08 420.72 35.9067 420.72 35.56C420.72 35.32 420.813 35.1333 421 35C421.213 34.8667 421.467 34.8 421.76 34.8C421.92 34.8 422.133 34.8267 422.4 34.88C422.693 34.9067 422.947 34.9333 423.16 34.96C424.2 34.16 424.973 33.2667 425.48 32.28C425.987 31.2933 426.24 30.2667 426.24 29.2C426.24 27.9733 425.933 27.0667 425.32 26.48C424.707 25.8933 423.853 25.6 422.76 25.6C421.64 25.6 420.627 25.9067 419.72 26.52C418.813 27.1067 418.053 27.9867 417.44 29.16L416.76 28.84C418.307 25.5067 420.747 23.84 424.08 23.84Z" fill="white"/>
+                <circle cx="423" cy="37" r="32.5" stroke="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M421.989 71.9408C422.355 71.9521 422.721 71.9578 423.09 71.9578C442.384 71.9578 458.025 56.3169 458.025 37.0229C458.025 17.7288 442.384 2.08789 423.09 2.08789C422.721 2.08789 422.355 2.09358 421.989 2.10489L421.989 5.10649C422.355 5.09412 422.721 5.08789 423.09 5.08789C440.727 5.08789 455.025 19.3857 455.025 37.0229C455.025 54.6601 440.727 68.9578 423.09 68.9578C422.721 68.9578 422.355 68.9516 421.989 68.9392L421.989 71.9408Z" fill="#FFB800"/>
+                <path d="M623.32 45.04C622.973 44.96 621.64 44.8933 619.32 44.84V52.64H616.12V44.84H605.68V44L618.68 25.84H619.32V42.16H619.8C620.52 42.16 621.053 42.1067 621.4 42C621.773 41.8667 622.027 41.6667 622.16 41.4C622.293 41.1067 622.4 40.68 622.48 40.12H623.16C623.16 42.36 623.213 44 623.32 45.04ZM616.12 42.16V30.72L608.04 42.16H616.12Z" fill="white"/>
+                <circle cx="616" cy="39" r="32.5" stroke="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M585.81 53.3962C591.277 64.4451 602.665 72.0427 615.828 72.0427C634.314 72.0427 649.299 57.0568 649.299 38.5709C649.299 20.0849 634.314 5.09912 615.828 5.09912C615.476 5.09912 615.125 5.10455 614.776 5.11534L614.776 8.11694C615.125 8.10509 615.476 8.09912 615.828 8.09912C632.657 8.09912 646.299 21.7418 646.299 38.5709C646.299 55.4 632.657 69.0427 615.828 69.0427C604.218 69.0427 594.125 62.5503 588.981 52.9982L585.81 53.3962Z" fill="#FFB800"/>
+                <path d="M809.36 23.4C809.36 26.12 809.413 28.0667 809.52 29.24C808.96 29.1067 807.107 29.04 803.96 29.04H799.72L799.24 36.76C799.987 36.3867 800.707 36.0933 801.4 35.88C802.093 35.6667 802.933 35.56 803.92 35.56C806.24 35.56 808 36.1333 809.2 37.28C810.4 38.4 811 39.88 811 41.72C811 43.6933 810.347 45.4533 809.04 47C807.76 48.5733 806.093 49.7867 804.04 50.64C802.013 51.4933 799.933 51.92 797.8 51.92V51.2C799.427 51.1733 800.947 50.8133 802.36 50.12C803.8 49.4267 804.96 48.4 805.84 47.04C806.747 45.68 807.2 44.04 807.2 42.12C807.2 40.44 806.76 39.1333 805.88 38.2C805 37.24 803.76 36.76 802.16 36.76C801.52 36.76 800.973 36.8133 800.52 36.92C800.067 37.0267 799.52 37.2 798.88 37.44L798.48 37.2L799.24 25.28C799.773 25.3867 800.493 25.44 801.4 25.44H805.92C806.64 25.44 807.173 25.3867 807.52 25.28C807.893 25.1467 808.147 24.9467 808.28 24.68C808.413 24.3867 808.52 23.96 808.6 23.4H809.36Z" fill="white"/>
+                <circle cx="803.184" cy="36.5002" r="32.5" stroke="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M774.187 17.9049C770.901 23.1324 769 29.3191 769 35.9497C769 54.6997 784.2 69.8995 802.95 69.8995C821.7 69.8995 836.899 54.6997 836.899 35.9497C836.899 17.1998 821.7 2 802.95 2C801.513 2 800.097 2.08925 798.707 2.26252L797.75 5.43486C799.441 5.1489 801.178 5 802.95 5C820.043 5 833.899 18.8567 833.899 35.9497C833.899 53.0428 820.043 66.8995 802.95 66.8995C785.857 66.8995 772 53.0428 772 35.9497C772 28.9937 774.295 22.5736 778.169 17.4053L774.187 17.9049Z" fill="#FFB800"/>
+                <path d="M993.96 31.48C995.24 31.48 996.427 31.8267 997.52 32.52C998.613 33.2133 999.493 34.2267 1000.16 35.56C1000.83 36.8667 1001.16 38.4133 1001.16 40.2C1001.16 42.1467 1000.76 43.8267 999.96 45.24C999.187 46.6533 998.133 47.7333 996.8 48.48C995.467 49.2 993.987 49.56 992.36 49.56C989.8 49.56 987.8 48.56 986.36 46.56C984.92 44.56 984.2 41.7733 984.2 38.2C984.2 34.4667 984.907 31.3067 986.32 28.72C987.76 26.1067 989.507 24.12 991.56 22.76C993.613 21.3733 995.68 20.48 997.76 20.08L997.92 20.88C996.293 21.4133 994.827 22.1333 993.52 23.04C992.24 23.9467 991.107 25.3467 990.12 27.24C989.133 29.1333 988.507 31.6267 988.24 34.72C988.853 33.6 989.693 32.7867 990.76 32.28C991.827 31.7467 992.893 31.48 993.96 31.48ZM992.76 48.76C994.067 48.76 995.147 48.08 996 46.72C996.853 45.36 997.28 43.28 997.28 40.48C997.28 37.76 996.88 35.7733 996.08 34.52C995.28 33.2667 994.24 32.64 992.96 32.64C992.027 32.64 991.093 32.92 990.16 33.48C989.253 34.0133 988.573 34.88 988.12 36.08C988.093 36.5067 988.08 37.1867 988.08 38.12C988.08 41.96 988.533 44.6933 989.44 46.32C990.347 47.9467 991.453 48.76 992.76 48.76Z" fill="white"/>
+                <circle cx="993" cy="35" r="32.5" stroke="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M993.307 4.05371C975.94 4.05371 961.861 18.1327 961.861 35.5C961.861 52.8673 975.94 66.9463 993.307 66.9463C1010.67 66.9463 1024.75 52.8673 1024.75 35.5C1024.75 18.1327 1010.67 4.05371 993.307 4.05371ZM958.861 35.5C958.861 16.4758 974.283 1.05371 993.307 1.05371C1012.33 1.05371 1027.75 16.4758 1027.75 35.5C1027.75 54.5241 1012.33 69.9463 993.307 69.9463C974.283 69.9463 958.861 54.5241 958.861 35.5Z" fill="#FFB800"/>
+                </svg>
+        </div>
+        <div class="workStages__stages">
+            <p class="workStages__stage">Виїзд майстра на<br> обєкт для замірів</p>
+            <p class="workStages__stage">Складання кошторису<br/> згідно попередніх<br/> домовлень</p>
+            <p class="workStages__stage">Підписання договору</p>
+            <p class="workStages__stage">Закупівля матеріалу</p>
+            <p class="workStages__stage">Вчасна здача<br/> проекту</p>
+            <p class="workStages__stage">Щасливі замовники</p>
+        </div>
+    </div>
+    </section>
+    <section class="portfolio" id="portfolio">
+        <h3 class="portfolio__subtitle subtitle">портфоліо</h3>
+        <h2 class="portfolio__title title">Наші роботи</h2>
+        <div class="portfolio__body">
+        <div class="portfolio-item">
+            <h4 class="portfolio-item__title">Назва проекта</h4>
+            <p class="portfolio-item__text">
+                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>
+                 Nullam condimentum eros arcu, at aliquet tortor vestibulum<br/> 
+                 ut. Quisque sed libero nec nulla pulvinar pharetra. Aliquam<br/>
+                 porttitor justo lorem, at rhoncus nulla condimentum vitae.<br/>
+                 Cras vitae aliquet quam. Orci varius natoque penatibus et<br/>
+                 magnis dis parturient montes, nascetur ridiculus mus.<br/>
+                 Phasellus id quam nulla. 
+                </p>
+                <div class="portfolio-item__info">
+                    <span>Термін ремонта:</span> <span>21 день</span>
+                </div>
+                <div class="portfolio-item__info">
+                    <span>Площа: </span> <span>81 м <sup>2</sup></span>
+                </div>
+        </div>
+        <div class="portfolio-slider">
+            <div class="portfolio-slider__photos">
+                <img src="./img/ph1.png" alt="Photo">
+                <img src="./img/ph2.png" alt="Photo">
+                <img src="./img/ph3.png" alt="Photo">
+            </div>
+                <div class="portfolio-slider__main">
+                    <img src="./img/mainPh.png" alt="MainPhoto">
+                    <div class="portfolio-slider__controls">
+                        <div class="portfolio-slider__indecators">
+                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g filter="url(#filter0_d)">
+                                <circle cx="8.5" cy="8.5" r="4.5" fill="white"/>
+                                </g>
+                                <defs>
+                                <filter id="filter0_d" x="0" y="0" width="17" height="17" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                                <feOffset/>
+                                <feGaussianBlur stdDeviation="2"/>
+                                <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.6 0 0 0 0 0 0 0 0 0.43 0"/>
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                                </filter>
+                                </defs>
+                                </svg>
+                                
+                                <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="3" cy="3" r="3" fill="white" fill-opacity="0.45"/>
+                                </svg>
+                                <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="3" cy="3" r="3" fill="white" fill-opacity="0.45"/>
+                                 </svg>
+                                 <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="3" cy="3" r="3" fill="white" fill-opacity="0.45"/>
+                                </svg>
+                        </div>
+                        <div class="portfolio-slider__buttons">
+                        <button class="portfolio-slider__button control__hover slider__button">
+                            <svg width="16" height="28" viewBox="0 0 16 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14 26L2 14L14 2" stroke="white" stroke-opacity="0.63" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            </button>
+                        <button class="portfolio-slider__button control__hover slider__button">
+                            <svg width="16" height="28" viewBox="0 0 16 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 26L14 14L2 2" stroke="white" stroke-opacity="0.63" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            </button>
+                        </div>
+                        </div>
+                </div>
+        </div>
+    </div>
+    </section>
+    <section class="reviews" id="reviews"> 
+        <div class="reviews__body container">
+            <h3 class="reviews__subtitle subtitle">Відгуки</h3>
+            <h2 class="reviews__title title">Що про нас говорять<br/> наші клієнти</h2>
+            <div class="reviews-slider">
+                <p class="reviews-slider__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut eros at nunc
+                     venenatis varius ac ut nisl. Cras vulputate efficitur ligula, ac bibendum est placerat vel. Integer 
+                     sit amet lectus non enim maximus varius sed non arcu. Lorem ipsum dolor sit amet, consectetur 
+                     adipiscing elit. Nulla ut eros at nunc venenatis varius ac ut nisl. Cras vulputate efficitur
+                      ligula, ac bibendum est placerat vel. Integer sit amet lectus non enim maximus varius sed 
+                      non arcu. 
+                </p>
+                <span class="reviews-slider__sender">Елена Филонова, Львів</span>
+                <div class="reviews-slider__controls">
+                    <button class="reviews-slider__button control__hover slider__button">
+                        <svg width="16" height="28" viewBox="0 0 16 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 26L2 14L14 2" stroke="white" stroke-opacity="0.63" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        </button>
+                    <div class="reviews-slider__indecators">
+                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_d)">
+                            <circle cx="8.5" cy="8.5" r="4.5" fill="#FF9900"/>
+                            </g>
+                            <defs>
+                            <filter id="filter0_d" x="0" y="0" width="17" height="17" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                            <feOffset/>
+                            <feGaussianBlur stdDeviation="2"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.6 0 0 0 0 0 0 0 0 0.43 0"/>
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                            </filter>
+                            </defs>
+                            </svg>
+                            
+                        <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="3" cy="3" r="3" fill="#C4C4C4" fill-opacity="0.45"/>
+                        </svg>
+                        <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="3" cy="3" r="3" fill="#C4C4C4" fill-opacity="0.45"/>
+                        </svg>
+                        <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="3" cy="3" r="3" fill="#C4C4C4" fill-opacity="0.45"/>
+                        </svg>
+                    </div>
+                    <button class="reviews-slider__button control__hover slider__button">
+                        <svg width="16" height="28" viewBox="0 0 16 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 26L14 14L2 2" stroke="white" stroke-opacity="0.63" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        </button>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <form action="POST" class="connection">
+        <div class="connection__container container">
+            <h2 class="connection__title">Зв'яжіться з нами</h2>
+            <p class="connection__subtitle">Залиште номер телефону, і ми зв'яжемося з вами на протязі 5 хвилин.</p>
+            <div class="connection__inputs">
+                <input type="text" class="connection__input" placeholder="Ім’я">
+                <input type="email" class="connection__input" placeholder="E-mail">
+                <input type="text" class="connection__input" placeholder="Ваше повідомлення..">
+            </div>
+            <input class="connection__button button" type="submit" value="Надіслати">
+        </div>
+    </form>
+    <footer class="footer">
+        <div class="footer__body container">
+        <div class="footer__discription">
+            <img src="./img/LOGO.png" alt="Logo">
+            <p class="footer__text">
+                Duis aute irure dolor in<br/>
+                 reprehenderit in voluptate velit esse cillum dolore eu fugiat<br/>
+                  nulla pariatur. 
+            </p>
+        </div>
+        <nav class="footer-nav">
+            <ul class="footer-nav__list">
+                <li class="footer-nav__item"><a href="/" class="footer-nav__link">Про нас </a></li>
+                <li class="footer-nav__item"><a href="/" class="footer-nav__link">Портфоліо</a></li>
+                <li class="footer-nav__item"><a href="/" class="footer-nav__link">Етапи роботи</a></li>
+            </ul>
+        </nav>
+        <div class="footer__contacts" id="contacts">
+            <p class="footer__adress"><span>Україна</span>, м.Львів,<br/>
+            вул.Зелена 230</p>
+            <span class="footer__phone">(097)857-70-47</span>
+        </div>
+        <div class="footer__socials">
+            <a href="/" class="footer__social social">
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                    <path d="M11.1767 9.38133C11.1767 10.373 10.3728 11.177 9.38108 11.177C8.38936 11.177 7.58545 10.373 7.58545 9.38133C7.58545 8.38961 8.38936 7.58569 9.38108 7.58569C10.3728 7.58569 11.1767 8.38961 11.1767 9.38133Z" fill="white" fill-opacity="0.2"/>
+                    <path d="M13.5806 6.20431C13.4942 5.97041 13.3565 5.75869 13.1776 5.58491C13.0038 5.40598 12.7923 5.26827 12.5582 5.18196C12.3684 5.10823 12.0832 5.02049 11.558 4.99658C10.9899 4.97067 10.8195 4.96509 9.38121 4.96509C7.94273 4.96509 7.77238 4.97053 7.20438 4.99644C6.67917 5.02049 6.39388 5.10823 6.20421 5.18196C5.97016 5.26827 5.75845 5.40598 5.58481 5.58491C5.40588 5.75869 5.26817 5.97026 5.18171 6.20431C5.10799 6.39412 5.02024 6.67941 4.99634 7.20462C4.97043 7.77263 4.96484 7.94297 4.96484 9.38145C4.96484 10.8198 4.97043 10.9901 4.99634 11.5583C5.02024 12.0835 5.10799 12.3686 5.18171 12.5585C5.26817 12.7925 5.40574 13.0041 5.58467 13.1778C5.75845 13.3568 5.97002 13.4945 6.20407 13.5808C6.39388 13.6547 6.67917 13.7424 7.20438 13.7663C7.77238 13.7922 7.94258 13.7977 9.38107 13.7977C10.8197 13.7977 10.99 13.7922 11.5579 13.7663C12.0831 13.7424 12.3684 13.6547 12.5582 13.5808C13.028 13.3996 13.3993 13.0283 13.5806 12.5585C13.6543 12.3686 13.742 12.0835 13.7661 11.5583C13.792 10.9901 13.7974 10.8198 13.7974 9.38145C13.7974 7.94297 13.792 7.77263 13.7661 7.20462C13.7422 6.67941 13.6544 6.39412 13.5806 6.20431ZM9.38121 12.1475C7.8534 12.1475 6.6149 10.9091 6.6149 9.38131C6.6149 7.8535 7.8534 6.61514 9.38121 6.61514C10.9089 6.61514 12.1474 7.8535 12.1474 9.38131C12.1474 10.9091 10.9089 12.1475 9.38121 12.1475ZM12.2567 7.15223C11.8997 7.15223 11.6103 6.86278 11.6103 6.50578C11.6103 6.14877 11.8997 5.85933 12.2567 5.85933C12.6137 5.85933 12.9032 6.14877 12.9032 6.50578C12.903 6.86278 12.6137 7.15223 12.2567 7.15223Z" fill="white" fill-opacity="0.2"/>
+                    <path d="M9.38127 0C4.20093 0 0 4.20093 0 9.38127C0 14.5616 4.20093 18.7625 9.38127 18.7625C14.5616 18.7625 18.7625 14.5616 18.7625 9.38127C18.7625 4.20093 14.5616 0 9.38127 0ZM14.7357 11.6022C14.7096 12.1756 14.6184 12.5671 14.4853 12.9098C14.2055 13.6334 13.6334 14.2055 12.9098 14.4853C12.5673 14.6184 12.1756 14.7095 11.6023 14.7357C11.0279 14.7619 10.8444 14.7682 9.38141 14.7682C7.91831 14.7682 7.73494 14.7619 7.16035 14.7357C6.58704 14.7095 6.19539 14.6184 5.85284 14.4853C5.49326 14.35 5.16774 14.138 4.89863 13.8639C4.62464 13.5949 4.41264 13.2693 4.27737 12.9098C4.14424 12.5673 4.05306 12.1756 4.02701 11.6023C4.00052 11.0277 3.99437 10.8442 3.99437 9.38127C3.99437 7.91831 4.00052 7.73479 4.02686 7.16035C4.05291 6.5869 4.14396 6.19539 4.27708 5.8527C4.41236 5.49326 4.6245 5.1676 4.89863 4.89863C5.1676 4.6245 5.49326 4.4125 5.8527 4.27723C6.19539 4.1441 6.5869 4.05306 7.16035 4.02686C7.73479 4.00067 7.91831 3.99437 9.38127 3.99437C10.8442 3.99437 11.0277 4.00067 11.6022 4.02701C12.1756 4.05306 12.5671 4.1441 12.9098 4.27708C13.2693 4.41236 13.5949 4.6245 13.8641 4.89863C14.138 5.16774 14.3502 5.49326 14.4853 5.8527C14.6186 6.19539 14.7096 6.5869 14.7358 7.16035C14.762 7.73479 14.7682 7.91831 14.7682 9.38127C14.7682 10.8442 14.762 11.0277 14.7357 11.6022Z" fill="white" fill-opacity="0.2"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0">
+                    <rect width="18.7625" height="18.7625" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                    
+                    
+            </a>
+            <a href="/" class="footer__social social"><svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0)">
+                <path d="M11.1889 18.6404C11.1108 18.6531 11.0323 18.6649 10.9536 18.6756C11.0323 18.6649 11.1108 18.6531 11.1889 18.6404Z" fill="white" fill-opacity="0.2"/>
+                <path d="M11.3767 18.6084C11.3394 18.6153 11.302 18.6216 11.2646 18.628C11.302 18.6216 11.3394 18.6153 11.3767 18.6084Z" fill="white" fill-opacity="0.2"/>
+                <path d="M10.7441 18.7017C10.6526 18.712 10.5606 18.7211 10.4683 18.7289C10.5606 18.7211 10.6526 18.712 10.7441 18.7017Z" fill="white" fill-opacity="0.2"/>
+                <path d="M10.9243 18.6797C10.8803 18.6854 10.8361 18.6907 10.792 18.6957C10.8361 18.6907 10.8803 18.6854 10.9243 18.6797Z" fill="white" fill-opacity="0.2"/>
+                <path d="M11.6318 18.5576C11.5988 18.5646 11.5658 18.5716 11.5327 18.5784C11.5658 18.5716 11.5988 18.5646 11.6318 18.5576Z" fill="white" fill-opacity="0.2"/>
+                <path d="M12.2659 18.4001C12.2393 18.4077 12.2127 18.4149 12.186 18.4223C12.2127 18.4149 12.2393 18.4077 12.2659 18.4001Z" fill="white" fill-opacity="0.2"/>
+                <path d="M12.0738 18.4526C12.0449 18.4602 12.0159 18.468 11.9868 18.4753C12.0159 18.468 12.0449 18.4604 12.0738 18.4526Z" fill="white" fill-opacity="0.2"/>
+                <path d="M11.8234 18.5154C11.7928 18.5225 11.7619 18.5293 11.731 18.5361C11.7619 18.5293 11.7928 18.5225 11.8234 18.5154Z" fill="white" fill-opacity="0.2"/>
+                <path d="M10.4652 18.7292C10.4158 18.7333 10.3664 18.7369 10.3169 18.7401C10.3664 18.7369 10.4158 18.7333 10.4652 18.7292Z" fill="white" fill-opacity="0.2"/>
+                <path d="M19.0575 9.38127C19.0575 4.20093 14.8565 0 9.67619 0C4.49585 0 0.294922 4.20093 0.294922 9.38127C0.294922 14.5616 4.49585 18.7625 9.67619 18.7625C9.7313 18.7625 9.78613 18.7614 9.84109 18.7604V11.4575H7.82559V9.10857H9.84109V7.38008C9.84109 5.37545 11.0649 4.28438 12.853 4.28438C13.7093 4.28438 14.4454 4.34823 14.66 4.37671V6.47181H13.4269C12.4541 6.47181 12.2657 6.93417 12.2657 7.61255V9.10857H14.5919L14.2887 11.4575H12.2657V18.4001C16.1869 17.276 19.0575 13.6634 19.0575 9.38127Z" fill="white" fill-opacity="0.2"/>
+                <path d="M10.296 18.7417C10.1984 18.7478 10.1003 18.7527 10.002 18.7559C10.1003 18.7527 10.1984 18.7478 10.296 18.7417Z" fill="white" fill-opacity="0.2"/>
+                <path d="M9.99705 18.7566C9.94523 18.7583 9.89327 18.7595 9.84131 18.7604C9.89327 18.7595 9.94523 18.7583 9.99705 18.7566Z" fill="white" fill-opacity="0.2"/>
+                </g>
+                <defs>
+                <clipPath id="clip0">
+                <rect width="18.7625" height="18.7625" fill="white" transform="translate(0.294922)"/>
+                </clipPath>
+                </defs>
+                </svg>
+                </a>
+            <a href="/" class="footer__social social">
+                 <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0)">
+                <path d="M9.38127 0C4.20093 0 0 4.20093 0 9.38127C0 14.5616 4.20093 18.7625 9.38127 18.7625C14.5616 18.7625 18.7625 14.5616 18.7625 9.38127C18.7625 4.20093 14.5616 0 9.38127 0ZM6.65518 14.1818H4.37041V7.30807H6.65518V14.1818ZM5.51287 6.36946H5.49798C4.73129 6.36946 4.23543 5.84168 4.23543 5.18206C4.23543 4.50755 4.74646 3.99437 5.52804 3.99437C6.30962 3.99437 6.7906 4.50755 6.80548 5.18206C6.80548 5.84168 6.30962 6.36946 5.51287 6.36946ZM14.8936 14.1818H12.6091V10.5045C12.6091 9.58038 12.2783 8.95011 11.4516 8.95011C10.8205 8.95011 10.4446 9.37526 10.2794 9.78566C10.219 9.93253 10.2042 10.1378 10.2042 10.3432V14.1818H7.9196C7.9196 14.1818 7.94951 7.95295 7.9196 7.30807H10.2042V8.28133C10.5078 7.81295 11.0511 7.14675 12.2632 7.14675C13.7664 7.14675 14.8936 8.12916 14.8936 10.2404V14.1818Z" fill="white" fill-opacity="0.2"/>
+                </g>
+                <defs>
+                <clipPath id="clip0">
+                <rect width="18.7625" height="18.7625" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg>
+            </a>
+        </div>
+    </div>
+    <hr>
+    <div class="footer__copyright"><p class="container">2020 © Come Back Agency. All Rights Reserved.</p></div>
+    </footer>
+    
+
+
+</body>
+</html>
