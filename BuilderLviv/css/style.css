@@ -298,7 +298,7 @@ body {
 }
 
 .header .header-advantages__img {
-  z-index: -100;
+  z-index: 1;
   position: relative;
   right: 50px;
 }
