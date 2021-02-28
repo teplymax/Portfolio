@@ -991,6 +991,7 @@ body {
     &__subtitle {
       width: fit-content;
       align-self: center;
+      text-align: center;
     }
     &__bottom {
       flex-direction: row;
@@ -1020,7 +1021,7 @@ body {
         display: flex;
         width: 67px;
         height: 67px;
-        border: 1px solid #ffffff;
+        border: 1px solid #ffb800;
         border-radius: 50%;
         align-items: center;
         justify-content: center;

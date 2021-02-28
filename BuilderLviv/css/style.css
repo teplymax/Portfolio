@@ -1226,6 +1226,7 @@ body {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+    text-align: center;
   }
   .workStages__bottom {
     -webkit-box-orient: horizontal;
@@ -1270,7 +1271,7 @@ body {
     display: flex;
     width: 67px;
     height: 67px;
-    border: 1px solid #ffffff;
+    border: 1px solid #ffb800;
     border-radius: 50%;
     -webkit-box-align: center;
         -ms-flex-align: center;
