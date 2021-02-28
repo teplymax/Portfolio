@@ -74,6 +74,12 @@
         <div class="header__body container">
             <nav class="header__navigation">
                 <img src="./img/LOGO.png" alt="Logo">
+                <button class="burger-menu__button button">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+width="50" height="50"
+viewBox="0 0 50 50"
+style=" fill:#ff9900;"><path d="M 2 9 L 2 11 L 48 11 L 48 9 L 2 9 z M 2 24 L 2 26 L 48 26 L 48 24 L 2 24 z M 2 39 L 2 41 L 48 41 L 48 39 L 2 39 z"></path></svg>
+                </button>
                 <ul class="header__list list">
                     <li class="header__item"><a href="#about" class="header__link">Про нас</a></li>
                     <li class="header__item"><a href="#reviews" class="header__link">Відгуки</a></li>
@@ -83,6 +89,15 @@
                 </ul>
                 <button class="header__button button">Замовити дзвінок</button>
             </nav>
+           
+                <ul class="header__list list burger-menu">
+                    <li class="header__item"><a href="#about" class="header__link">Про нас</a></li>
+                    <li class="header__item"><a href="#reviews" class="header__link">Відгуки</a></li>
+                    <li class="header__item"><a href="/" class="header__link">Ціни</a></li>
+                    <li class="header__item"><a href="#portfolio" class="header__link">Наші роботи</a></li>
+                    <li class="header__item"><a href="#contacts" class="header__link">Контакти</a></li>
+                </ul>
+             
         
         <div class="header-about">
             <h1 class="header-about__title title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h1>
@@ -90,7 +105,9 @@
             <button class="header-about__button button">Залишити заявку</button>
         </div>
     </div>
-        <section class="header-advantages">
+    
+        <div class="header-advantages">
+            <div class="blur"></div>
             <div class="header-advantages__container container">
           <div class="header-advantages__item">
               <p class="header-advantages__text">Фіксований <br/> кошторис
@@ -114,7 +131,7 @@
               <img src="./img/guarantee 1.png" alt="Business1" class="header-advantages__img">
           </div>
         </div>
-      </section>
+      </div>
     </header>
     <section class="about" id="about">
         <div class="about__left">
@@ -396,6 +413,6 @@
     </footer>
     
 
-
+<script src="./js/index.js"></script>
 </body>
 </html>
