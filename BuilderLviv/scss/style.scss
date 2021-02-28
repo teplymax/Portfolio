@@ -698,6 +698,15 @@ body {
 .burger-menu {
   display: none;
 }
+.phone-icon {
+  display: none;
+  height: 47px;
+  width: fit-content;
+  border: none;
+  svg {
+    fill: #ff9900;
+  }
+}
 .clicked {
   background: rgba(0, 0, 0, 0.31);
 }
@@ -740,6 +749,12 @@ body {
   .header {
     &__list {
       display: none;
+    }
+    &__button {
+      display: none;
+    }
+    .phone-icon {
+      display: flex;
     }
 
     .burger-menu {
@@ -954,5 +969,10 @@ body {
     &__container {
       flex-direction: column;
     }
+  }
+}
+@media (max-width: 680px) {
+  .header__contacts {
+    display: none;
   }
 }

@@ -884,6 +884,19 @@ body {
   display: none;
 }
 
+.phone-icon {
+  display: none;
+  height: 47px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+}
+
+.phone-icon svg {
+  fill: #ff9900;
+}
+
 .clicked {
   background: rgba(0, 0, 0, 0.31);
 }
@@ -923,6 +936,14 @@ body {
 @media (max-width: 810px) {
   .header__list {
     display: none;
+  }
+  .header__button {
+    display: none;
+  }
+  .header .phone-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .header .burger-menu {
     position: relative;
@@ -1174,6 +1195,12 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+@media (max-width: 680px) {
+  .header__contacts {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
